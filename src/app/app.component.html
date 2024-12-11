@@ -1,18 +1,41 @@
 <div>
-  <h2>Lista de Tareas</h2>
+  <h2>To-do List</h2>
   <ul>
     @for (tarea of listaTareas; track $index) {
     <li>
       {{ tarea }}
-      <button (click)="eliminarTarea($index)">Eliminar</button>
+      <button
+        matSuffix
+        mat-icon-button
+        aria-label="Clear"
+        (click)="eliminarTarea($index)"
+      >
+      <mat-icon matSuffix>close</mat-icon>
+      </button>
     </li>
     }
-    <input
-      type="text"
-      placeholder="Nueva tarea"
-      [(ngModel)]="nuevaTarea"
-      (keyup.enter)="agregarTarea()"
-    />
-    <button (click)="agregarTarea()">Agregar Tarea</button>
+
+    <mat-form-field appearance="outline" class="custom-input">
+      <mat-label>New task</mat-label>
+      <input
+        class="custom-matInput"
+        matInput
+        placeholder=""
+        type="text"
+        [(ngModel)]="nuevaTarea"
+        (keyup.enter)="agregarTarea()"
+      />
+
+      @if(nuevaTarea) {
+      <button
+        matSuffix
+        mat-icon-button
+        aria-label="Clear"
+        (click)="agregarTarea()"
+      >
+        <mat-icon matSuffix>add</mat-icon>
+      </button>
+      }
+    </mat-form-field>
   </ul>
 </div>
