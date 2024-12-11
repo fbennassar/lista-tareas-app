@@ -1,6 +1,7 @@
 div {
   max-width: 400px;
   margin: 20px auto;
+  padding: 10px auto;
 }
 
 ul {
@@ -85,4 +86,37 @@ button:hover {
 .custom-input {
   margin-top: 50px;
   width: 400px;
+}
+
+
+@media (max-width: 450px) {
+  div {
+    max-width: 80vw; /* Cambiado a unidades relativas */
+    margin-left: 5vw; /* Cambiado a unidades relativas */
+    margin-right: 5vw; /* Cambiado a unidades relativas */
+    padding: 2vw; /* Cambiado a unidades relativas */
+    font-size: 3.5vw; /* Cambiado a unidades relativas */
+  }
+  li {
+    max-width: 80vw; /* Cambiado a unidades relativas */
+    padding: 1.25vw; /* Cambiado a unidades relativas */
+    font-size: 3.5vw; /* Cambiado a unidades relativas */
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  p {
+    font-size: 3.5vw; /* Cambiado a unidades relativas */
+    line-height: 1.5;
+  }
+  .custom-input {
+    width: 80vw; /* Cambiado a unidades relativas */
+    height: 10px;
+  }
+
+  #mat-input-0 {
+    font-size: 3.5vw; /* Cambiado a unidades relativas */
+    height: 20px;
+  }
 }
