@@ -1,4 +1,6 @@
 [build]
 command = "ng build"
-functions = "netlify/functions"
 publish = "dist/lista-tareas-app/browser"
+
+[functions] 
+external_node_modules = ["@netlify/angular-runtime"]
