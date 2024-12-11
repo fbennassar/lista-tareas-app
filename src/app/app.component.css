@@ -12,7 +12,8 @@ ul {
 li {
   margin-bottom: 5px;
   padding: 8px;
-  background-color: dimgray;
+  /* border color */
+  border: 1px solid #f0f0f0;
   border-radius: 5px;
   display: flex;
   justify-content: space-between;
@@ -23,8 +24,8 @@ li {
 }
 
 li button {
-  background-color: #e74c3c;
-  color: #fff;
+  /* background-color: #e74c3c; */
+  color: #c0392b;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -33,9 +34,9 @@ li button {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-li button:hover {
+/* li button:hover {
   background-color: #c0392b;
-}
+} */
 
 input {
   padding: 8px;
@@ -44,7 +45,7 @@ input {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-button {
+/* button {
   padding: 8px;
   background-color: #4caf50;
   color: #fff;
@@ -57,7 +58,7 @@ button {
 
 button:hover {
   background-color: #45a049;
-}
+} */
 
 @media (prefers-color-scheme: light) {
   body {
@@ -66,22 +67,22 @@ button:hover {
   }
 
   li {
-    background-color: #f0f0f0;
+    border: 1px solid black;
   }
 
-  li button {
-    background-color: #e74c3c;
+  #mat-input-0 {
+    color: black !important;
   }
+}
 
-  li button:hover {
-    background-color: #c0392b;
-  }
 
-  button {
-    background-color: #4caf50;
-  }
+#mat-input-0 {
 
-  button:hover {
-    background-color: #45a049;
-  }
+  color: white;
+}
+
+
+.custom-input {
+  margin-top: 50px;
+  width: 400px;
 }
